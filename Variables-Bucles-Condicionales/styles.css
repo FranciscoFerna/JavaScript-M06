@@ -1,0 +1,17 @@
+body {
+    font-family: system-ui;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+h1 {
+    color: #4682b4;
+    margin-top: 50px;
+}
+
+p {
+    color: #333;
+    font-size: 18px;
+}
