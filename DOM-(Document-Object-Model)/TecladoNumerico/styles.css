@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin: 20px auto;
+    width: 300px;
+}
+
+#input-display {
+    width: 85%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: right;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tecla {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tecla:hover {
+    background-color: #bbb;
+}
+
+.tecla:active {
+    background-color: #999;
+}
