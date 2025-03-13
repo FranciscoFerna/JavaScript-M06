@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejercicio 2: Modificar Atributos (2 puntos)</title>
+</head>
+<body>
+  <h1>Ejercicio 2: Modificar Atributos (2 puntos)</h1>
+  <img src="assets/img.png" alt="Avatar">
+  <p id="description">Avatar</p>
+
+  <script>
+    let img = document.getElementsByTagName('img')[0];
+    img.src = 'assets/new-img.png';
+
+    let parrafo = document.getElementById('description');
+    parrafo.textContent = 'Imagen Actualizada'
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejercicio 1: Jugando con los elementos.</title>
+</head>
+<body>
+  <h1 id="titulo">Este es el titulo</h1>
+  <p id="importante">Este es un texto importante</p>
+  <p id="importanteNuevo">Este es un texto importante</p>
+  <input type="text" id="user-input">
+
+  <script>
+    let titulo = document.getElementById('titulo');
+    let importante = document.getElementById('importante');
+
+    console.log("Texto del titulo:", titulo.textContent);
+    console.log("Texto del importante:", importante.textContent);
+
+    let importanteNuevo = document.getElementById('importanteNuevo');
+
+    importanteNuevo.textContent = "Este es un texto importante actualizado";
+
+    let inputUser = document.getElementById('user-input');
+    inputUser.value = "Nuevo texto en el input";
+  </script>
+</body>
+</html>

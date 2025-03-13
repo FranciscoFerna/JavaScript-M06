@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejemplo 3 - CREATE & APPEND</title>
+</head>
+<body>
+  <div id="articulos">
+    <p>Parrafo que esta en el HTML</p>
+  </div>
+  <script>
+    // Creamos y añadimos nuevos elementos usando CREATE y APPEND
+
+    let parrafoPrimero = document.createElement('p');
+    let parrafoPrimeroTexto = document.createTextNode('Parrafo que creamos al principio pero que añadiremos al final');
+    parrafoPrimero.appendChild(parrafoPrimeroTexto);
+
+    let destacado = document.createElement('em');
+    destacadoTexto = document.createTextNode('Texto que destacamos');
+    destacado.appendChild(destacadoTexto);
+
+    let parrafoSegundo = document.createElement('p');
+    let parrafoSegundoTexto1 = document.createTextNode('Este es el ');
+    let parrafoSegundoTexto2 = document.createTextNode(' del segundo parrafo. Tenemos que ir añadiendo en el orden en el que queremos que salga');
+
+    // Añadimos los nodos texto y em que hgemos creado en el orden que queremos que salgan
+    parrafoSegundo.appendChild(parrafoSegundoTexto1);
+    parrafoSegundo.appendChild(destacado);
+    parrafoSegundo.appendChild(parrafoSegundoTexto2);
+
+    // Tenemos creado todos los parrafos y ahora hay que añadirlos al DOM
+    let myDiv = document.getElementById('articulos');
+    myDiv.style.backgroundColor = 'green';
+
+    // Insertamos el P que hemos definido en segunda posición, ANTES que el que hay ya dentro de la DIV
+    let parrafoDOM = myDiv.children[0];
+    myDiv.insertBefore(parrafoPrimero, parrafoDOM);
+
+    // O bien lo prondriamos a continuacion
+    // myDiv.appendChild(parrafoSegundo);
+
+    // Lo añadimos al final, se colocara automaticamente en la cola.
+    myDiv.appendChild(parrafoPrimero);
+    myDiv.appendChild(parrafoSegundo);
+  </script>
+</body>
+</html>

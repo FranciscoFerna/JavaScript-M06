@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejemplo 1 - Hello World JS</title>
+</head>
+<body>
+  <h1 id="titulo" atributoInventado="valorAtributo">Aprendiendo JavaScript</h1>
+  <p>Hola Mundo</p>
+  <p id="importante">Adios mundo <em>cruel</em></p>
+  <span class="importante">Esto es muy importante</span>
+
+  <p id="elemento">Esta página es <strong>muy simple</strong></p>
+  <script>
+    let titulo = document.getElementById('titulo');
+    console.log("Elemento con Id=titulo:", titulo);
+
+    let elemento = document.getElementById('elemento');
+    console.log("nodeName: ", elemento.nodeName);
+    console.log("textContent: ", elemento.textContent);
+    console.log("innerHTML: ", elemento.innerHTML);
+    console.log("outerHTML: ", elemento.outerHTML);
+  </script>
+</body>
+</html>

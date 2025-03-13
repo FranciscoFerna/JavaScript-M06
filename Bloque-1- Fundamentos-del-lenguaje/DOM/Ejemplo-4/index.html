@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejemplo 4 - Combinar CREATE & APPEND e innerHTML</title>
+</head>
+<body>
+  <div id="articulosInner">
+    <p>Parrafo que esta en el HTML</p>
+  </div>
+  <script>
+    let myDivInner = document.getElementById('articulosInner');
+    myDivInner.style.backgroundColor = 'yellow';
+
+    myDivInner.innerHTML = '<p>Parrafo añadido al final, por defecto</p>';
+
+    // Creamos un parrafo y le especificamos que texto HTML tiene (incluye tags)
+    let parrafoSegundoInner = document.createElement('p');
+    parrafoSegundoInner.innerHTML = 'Este es el <em>texto</em> del segundo parrafo. Tenemos que ir añadiendo en el orden en el que queremos que salga';
+
+    // Añadimos este nuevo parrafo antes del primero que hay
+    let parrafoDOMInner = myDivInner.children[0];
+    myDivInner.insertBefore(parrafoSegundoInner, parrafoDOMInner);
+  </script>
+</body>
+</html>

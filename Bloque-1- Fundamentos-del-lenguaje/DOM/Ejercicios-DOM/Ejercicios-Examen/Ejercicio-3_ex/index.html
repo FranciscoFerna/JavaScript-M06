@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejercicio 3: Crear y Añadir Elementos (2 puntos)</title>
+</head>
+<body>
+  <h1>Ejercicio 3: Crear y Añadir Elementos (2 puntos)</h1>
+  <div id="contenedor">
+
+  </div>
+
+  <script>
+    let contenedor = document.getElementById('contenedor');
+    let parrafo = document.createElement('p');
+    parrafo.textContent = 'Este es un parrafo añadido dinamicamente';
+
+    contenedor.appendChild(parrafo);
+  </script>
+</body>
+</html>

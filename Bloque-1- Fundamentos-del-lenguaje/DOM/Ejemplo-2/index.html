@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejemplo 2 - Aprendiendo JavaScript</title>
+</head>
+<body>
+  <h1 id="titulo" atributoInventado="valorAtributo">Aprendiendo JavaScript</h1>
+  <p>Hola Mundo</p>
+  <p id="importante">Adios mundo <em>cruel</em></p>
+  <span class="importante">Esto es muy importante</span>
+
+  <script>
+    let titulo = document.getElementById('titulo');
+    console.log("Elemento con Id=titulo:", titulo);
+
+    // Aprendiendo JavaScript Moderno
+    titulo.innerHTML = "Le cambio el titulo";
+    titulo.className="upper";
+    titulo.setAttribute("name", "pepe");
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Ejercicio 5: Tablero de Ajedrez (3 puntos)</title>
+</head>
+<body>
+  <h1>Ejercicio 5: Tablero de Ajedrez (3 puntos)</h1>
+  <div id="tablero">
+
+  </div>
+
+  <script>
+    let tablero = document.getElementById('tablero');
+    for (let i = 0; i < 8; i++) {
+      let fila = document.createElement('div');
+      fila.style.width = '400px';
+      fila.style.height = '50px';
+      fila.style.border = '1px solid black';
+
+      for (let j = 0; j < 8; j++) {
+      let casilla = document.createElement('div');
+      casilla.style.width = '50px';
+      casilla.style.height = '50px';
+      casilla.style.display = 'inline-block';
+      casilla.style.backgroundColor = (i + j) % 2 === 0 ? 'black' : 'white';
+
+      if (i < 2) {
+        casilla.innerHTML = 'O';
+        casilla.style.color = (i + j) % 2 === 0 ? 'white' : 'black';
+        casilla.style.textAlign = 'center';
+        casilla.style.lineHeight = '50px';
+      } else if (i > 5) {
+        casilla.innerHTML = 'X';
+        casilla.style.color = (i + j) % 2 === 0 ? 'white' : 'black';
+        casilla.style.textAlign = 'center';
+        casilla.style.lineHeight = '50px';
+      }
+
+      fila.appendChild(casilla);
+      }
+      tablero.appendChild(fila);
+    }
+  </script>
+</body>
+</html>
