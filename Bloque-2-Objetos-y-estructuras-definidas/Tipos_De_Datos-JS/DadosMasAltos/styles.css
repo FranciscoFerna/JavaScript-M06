@@ -1,0 +1,59 @@
+.dados-container {
+  align-items: center;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+p {
+  text-align: center;
+  margin: 10px;
+  font-size: 0.9em;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #05b3b9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.dados-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.dado {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 2em;
+  text-align: center;
+  line-height: 100px;
+}
+
+.resultado {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+  color: #05b3b9;
+}
