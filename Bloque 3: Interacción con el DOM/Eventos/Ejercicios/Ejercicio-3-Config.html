@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <script>
+        function saveSettings() {
+            let bgColor = document.getElementById("bgColor").value;
+            let textColor = document.getElementById("textColor").value;
+
+            document.cookie = `bgColor=${encodeURIComponent(bgColor)}; path=/; max-age=31536000`;
+            document.cookie = `textColor=${encodeURIComponent(textColor)}; path=/; max-age=31536000`;
+
+            window.close();
+        }
+
+        window.addEventListener("beforeunload", function () {
+            window.opener.postMessage("ventana_cerrada", "*");
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Configura tu estilo</h2>
+    <label for="bgColor">Color de fondo:</label>
+    <input type="color" id="bgColor"><br><br>
+
+    <label for="textColor">Color de fuente:</label>
+    <input type="color" id="textColor"><br><br>
+
+    <button onclick="saveSettings()">Guardar</button>
+</body>
+
+</html>

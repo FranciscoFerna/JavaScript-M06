@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalización con Cookies</title>
+    <script>
+        function getCookie(name) {
+            let cookies = document.cookie.split("; ");
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].split("=");
+                if (cookie[0] === name) {
+                    return decodeURIComponent(cookie[1]);
+                }
+            }
+            return null;
+        }
+
+        function applySettings() {
+            let bgColor = getCookie("bgColor");
+            let textColor = getCookie("textColor");
+
+            if (bgColor && textColor) {
+                document.body.style.backgroundColor = bgColor;
+                document.body.style.color = textColor;
+            } else {
+                let popup = window.open("Ejercicio-3-Config.html", "Configuración", "width=400,height=300");
+                window.addEventListener("message", function (event) {
+                    if (event.data === "ventana_cerrada") {
+                        location.reload();
+                    }
+                });
+            }
+        }
+
+        window.onload = applySettings;
+    </script>
+</head>
+
+<body>
+    <h1>Bienvenido a la página personalizada</h1>
+    <p>Esta página usa cookies para recordar tus preferencias.</p>
+</body>
+
+</html>
