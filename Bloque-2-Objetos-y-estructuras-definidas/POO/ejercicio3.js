@@ -5,7 +5,6 @@ Modela una jerarquía de personajes de un videojuego. Debe haber una clase base 
 
 Luego, crea al menos dos subclases: Guerrero y Mago. Ambas subclases deben heredar de Personaje y deben tener propiedades y métodos específicos de cada tipo de personaje. Por ejemplo, un Guerrero podría tener una propiedad fuerza y un método golpeEspada(), mientras que un Mago podría tener una propiedad mana y un método lanzarHechizo().
 Crea varios magos y guerreros y mira de ordenarlos por nivel.
-
 */
 
 
